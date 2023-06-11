@@ -1,0 +1,50 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_splash"
+        android:layoutDirection="ltr"
+        tools:context=".auth.Splash">
+
+
+        <ImageView
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:src="@drawable/ic_eat_more_logo"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_40sdp"/>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end">
+
+            <ImageView
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:src="@drawable/ic_vegitables"
+                android:translationX="@dimen/_50sdp"
+                android:translationY="@dimen/_35sdp" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </FrameLayout>
+
+
+
+</layout>

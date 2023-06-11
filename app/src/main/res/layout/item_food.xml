@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="food"
+            type="com.mamon.eatfoodapp.data.Food" />
+
+        <variable
+            name="onItemClicked"
+            type="android.view.View.OnClickListener" />
+
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnItemFood"
+        android:layout_width="@dimen/_130sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:onClick="@{onItemClicked}">
+
+
+        <LinearLayout
+            android:id="@+id/ll_background"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_splash"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/food_img"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_gravity="center"
+                tools:src="@drawable/pizza_1"
+                setImage="@{food.icon}"
+                android:layout_height="@dimen/_80sdp" />
+
+
+            <TextView
+                android:id="@+id/food_title"
+                android:layout_width="wrap_content"
+                tools:text="Pizza"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textSize="@dimen/_13sdp"
+                android:text="@{food.name}"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:numStars="5"
+                tools:rating="4.5"
+                android:scaleY="0.7"
+                android:scaleX="0.7"
+                setRate="@{food.rate}"
+                android:progressTint="@color/yellow"
+                android:secondaryProgressTint="@color/yellow"
+                android:layout_height="@dimen/_12sdp" />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_5sdp"/>
+
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                tools:text="$12"
+                android:text="@{String.valueOf(food.price)}"
+                android:textSize="@dimen/_22sdp"
+                android:textStyle="normal"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

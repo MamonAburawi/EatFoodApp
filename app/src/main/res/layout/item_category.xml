@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="category"
+            type="com.mamon.eatfoodapp.data.Category" />
+
+        <variable
+            name="onItemClicked"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/btnCategory"
+        android:layout_width="@dimen/_90sdp"
+        android:background="@drawable/bg_item_category"
+        android:layout_height="@dimen/_55sdp"
+        tools:ignore="UnusedAttribute"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:onClick="@{onItemClicked}">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_category"
+                android:layout_width="@dimen/_25sdp"
+                tools:src="@drawable/ic_hamburger"
+                android:layout_height="@dimen/_25sdp"
+                tools:tint="@color/red"
+                setImage="@{category.icon}"
+                app:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                tools:textColor="@color/red"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="normal"
+                android:text="@{category.name}"
+                android:layout_height="wrap_content"
+                tools:text="Burger" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Eat Food App</string>
+
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_for_a_food_item">Search for a food item</string>
+    <string name="categories">Categories</string>
+    <string name="signup">Sign Up</string>
+    <string name="log_in">Log In</string>
+    <string name="password">Password</string>
+    <string name="or">OR</string>
+    <string name="email_user_info">Enter email or username</string>
+    <string name="forget_password">Forget password?</string>
+</resources>
